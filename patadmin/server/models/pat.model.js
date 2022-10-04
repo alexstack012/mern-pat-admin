@@ -11,6 +11,7 @@ const PatSchema = new mongoose.Schema({
     insurName:{ type: String },
     insurMemId:{ type: String },
     insurGroupId:{ type: String },
-    lastVisit:{ type: String },
+    lastVisit: { type: String },
+    emergencyContact: {type: String}
 }, { timestamps: true });
 module.exports.Pat = mongoose.model('Pat', PatSchema);

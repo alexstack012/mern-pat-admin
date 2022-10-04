@@ -6,11 +6,34 @@ module.exports.index = (request, response) => {
 }
 // The method below is new
 module.exports.createPerson = (request, response) => {
-    const { name, insurance, notes } = request.body;
+    const {
+        name,
+        notes,
+        meds,
+        allergies,
+        dob,
+        religion,
+        height,
+        weight,
+        insurName,
+        insurGroupId,
+        insurMemId,
+        lastVisit,
+        emergencyContact } = request.body;
     Pat.create({
         name,
-        insurance,
-        notes
+        notes,
+        meds,
+        allergies,
+        dob,
+        religion,
+        height,
+        weight,
+        insurName,
+        insurGroupId,
+        insurMemId,
+        lastVisit,
+        emergencyContact
     })
         .then(pat => response.json(pat))
         .catch(err => response.json(err));
