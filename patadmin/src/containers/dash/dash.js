@@ -1,11 +1,13 @@
 import './dash.component.css'
 import React from "react";
+import Container from '@mui/material/Container';
+import navBar from '../../components/navBar/navBar';
 
 const Dash = () => {
     return (
-        <div>
-            <h1>Dash is rendering</h1>
-        </div>
+        <Container>
+            <navBar />
+        </Container>
     )
 }
 export default Dash;

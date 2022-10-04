@@ -5,7 +5,7 @@ module.exports.index = (request, response) => {
     });
 }
 // The method below is new
-module.exports.createPerson = (request, response) => {
+module.exports.createPat = (request, response) => {
     const {
         name,
         notes,
@@ -39,25 +39,25 @@ module.exports.createPerson = (request, response) => {
         .catch(err => response.json(err));
 }
 
-module.exports.getAllPeople = (request, response) => {
+module.exports.getAllPats = (request, response) => {
     Pat.find({})
-        .then(persons => response.json(persons))
+        .then(pats => response.json(pats))
         .catch(err => response.json(err))
 }
 
-module.exports.getPerson = (request, response) => {
+module.exports.getPat = (request, response) => {
     Pat.findOne({ _id: request.params.id })
         .then(pat => response.json(pat))
         .catch(err => response.json(err))
 }
 
-module.exports.updatePerson = (request, response) => {
+module.exports.updatePat = (request, response) => {
     Pat.findOneAndUpdate({ _id: request.params.id }, request.body, { new: true })
-        .then(updatedPerson => response.json(updatedPerson))
+        .then(updatedPat => response.json(updatedPat))
         .catch(err => response.json(err))
 }
 
-module.exports.deletePerson = (request, response) => {
+module.exports.deletePat = (request, response) => {
     Pat.deleteOne({ _id: request.params.id })
         .then(deleteConfirmation => response.json(deleteConfirmation))
         .catch(err => response.json(err))
