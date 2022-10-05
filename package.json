@@ -2,15 +2,7 @@
   "dependencies": {
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
-    "@mui/icons-material": "^5.10.6",
     "@mui/material": "^5.10.8",
-    "@mui/styled-engine-sc": "^5.10.6",
-    "axios": "^1.0.0",
-    "cors": "^2.8.5",
-    "express": "^4.18.1",
-    "mongoose": "^6.6.4",
-    "nodemon": "^2.0.20",
-    "react-router-dom": "^6.4.1",
-    "styled-components": "^5.3.6"
+    "react-router-dom": "^6.4.1"
   }
 }
